@@ -34,6 +34,8 @@ jobs:
         run: npm ci || npm install
 
       - name: Build Next.js
+        env:
+          GITHUB_PAGES: "true"
         run: npx next build
 
       - name: Upload artifact
