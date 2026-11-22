@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Star, Calendar, Scissors, ArrowDown } from "lucide-react";
 import { BUSINESS_INFO } from "@/data/barbershop-data";
+import { getAssetPath } from "@/lib/utils";
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -18,7 +19,7 @@ export function Hero({ onOpenBooking }: HeroProps) {
       {/* Background authentic photography with cinematic overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/interior.png"
+          src={getAssetPath("/images/interior.png")}
           alt="Style Place Barbershop Interior com iluminação hexagonal de estúdio"
           fill
           priority

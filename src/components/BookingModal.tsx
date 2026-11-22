@@ -17,6 +17,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { SERVICES, BARBERS, BUSINESS_INFO, ServiceItem, BarberItem } from "@/data/barbershop-data";
+import { getAssetPath } from "@/lib/utils";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -250,7 +251,7 @@ export function BookingModal({
                     <div className="flex items-center gap-3 mb-2">
                       <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gold/40">
                         <Image
-                          src={barber.image}
+                          src={getAssetPath(barber.image)}
                           alt={barber.name}
                           fill
                           className="object-cover object-top"

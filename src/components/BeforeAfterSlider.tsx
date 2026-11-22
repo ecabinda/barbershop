@@ -3,6 +3,7 @@
 import React, { useState, useRef, useCallback } from "react";
 import Image from "next/image";
 import { MoveHorizontal } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 interface BeforeAfterSliderProps {
   beforeImage: string;
@@ -71,7 +72,7 @@ export function BeforeAfterSlider({
     >
       {/* After image (Base layer) */}
       <Image
-        src={afterImage}
+        src={getAssetPath(afterImage)}
         alt={afterAlt}
         fill
         className="object-cover object-center"
@@ -88,7 +89,7 @@ export function BeforeAfterSlider({
       >
         <div className="relative w-full h-full" style={{ width: containerRef.current?.offsetWidth || "100%" }}>
           <Image
-            src={beforeImage}
+            src={getAssetPath(beforeImage)}
             alt={beforeAlt}
             fill
             className="object-cover object-center"

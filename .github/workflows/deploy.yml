@@ -36,6 +36,7 @@ jobs:
       - name: Build Next.js
         env:
           GITHUB_PAGES: "true"
+          NEXT_PUBLIC_BASE_PATH: "/barbershop"
         run: npx next build
 
       - name: Upload artifact

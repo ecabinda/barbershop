@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Camera, X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import { GALLERY_ITEMS, GalleryPhoto } from "@/data/barbershop-data";
+import { getAssetPath } from "@/lib/utils";
 
 export function Gallery() {
   const [activeCategory, setActiveCategory] = useState<"todos" | "espaço" | "equipa" | "trabalhos">("todos");
@@ -88,7 +89,7 @@ export function Gallery() {
               className="group relative aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer border border-white/10 bg-background-secondary shadow-lg hover:border-gold/40 transition-all duration-300"
             >
               <Image
-                src={photo.src}
+                src={getAssetPath(photo.src)}
                 alt={photo.alt}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -153,7 +154,7 @@ export function Gallery() {
           >
             <div className="relative w-full h-[75vh]">
               <Image
-                src={filteredPhotos[activePhotoIndex].src}
+                src={getAssetPath(filteredPhotos[activePhotoIndex].src)}
                 alt={filteredPhotos[activePhotoIndex].alt}
                 fill
                 className="object-contain"

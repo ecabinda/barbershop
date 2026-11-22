@@ -1,3 +1,5 @@
+import { getAssetPath } from "@/lib/utils";
+
 export interface ServiceItem {
   id: string;
   title: string;
@@ -141,7 +143,7 @@ export const BARBERS: BarberItem[] = [
     role: "Especialista em Corte & Visagismo",
     description:
       "Altamente referenciada pelos clientes pela sua simpatia, precisão impecável nos cortes e comunicação fluente em Inglês e Português.",
-    image: "/images/barber-clara.png",
+    image: getAssetPath("/images/barber-clara.png"),
     languages: ["Português", "English"],
     specialties: ["Cortes Clássicos & Modernos", "Texturização", "Fade de Precisão"],
   },
@@ -151,7 +153,7 @@ export const BARBERS: BarberItem[] = [
     role: "Master Barber & Beard Stylist",
     description:
       "Mestre na arte do barbear tradicional, navalha clássica e styling masculino contemporâneo com foco no conforto e confiança do cliente.",
-    image: "/images/barber-chair.png",
+    image: getAssetPath("/images/barber-chair.png"),
     languages: ["Português"],
     specialties: ["Ritual da Toalha Quente", "Modelagem de Barba", "Corte Masculino"],
   },
@@ -199,42 +201,42 @@ export const REVIEWS: ReviewItem[] = [
 export const GALLERY_ITEMS: GalleryPhoto[] = [
   {
     id: "gal-1",
-    src: "/images/storefront.png",
+    src: getAssetPath("/images/storefront.png"),
     alt: "Fachada da Style Place Barbershop na Loja 17 em Caldas da Rainha com poste tradicional de barbearia",
     category: "espaço",
     caption: "A nossa entrada na Rua de Vitorino Fróis — Loja 17, Caldas da Rainha",
   },
   {
     id: "gal-2",
-    src: "/images/interior.png",
+    src: getAssetPath("/images/interior.png"),
     alt: "Interior moderno da barbearia com iluminação hexagonal de estúdio e cadeiras ergonómicas",
     category: "espaço",
     caption: "Design interior moderno, estações completas e iluminação de precisão",
   },
   {
     id: "gal-3",
-    src: "/images/barber-clara.png",
+    src: getAssetPath("/images/barber-clara.png"),
     alt: "Clara, barbeira e cabeleireira especialista na Style Place Barbershop",
     category: "equipa",
     caption: "Clara — reconhecida pelo profissionalismo e atenção a cada cliente",
   },
   {
     id: "gal-4",
-    src: "/images/barber-chair.png",
+    src: getAssetPath("/images/barber-chair.png"),
     alt: "Profissional da Style Place pronto para o atendimento na cadeira de barbearia",
     category: "equipa",
     caption: "Dedicação, hospitalidade e paixão pelo detalhe masculino",
   },
   {
     id: "gal-5",
-    src: "/images/haircut-side.png",
+    src: getAssetPath("/images/haircut-side.png"),
     alt: "Corte de cabelo com textura e acabamento lateral personalizado",
     category: "trabalhos",
     caption: "Textura natural, volume e alinhamento de perfil impecável",
   },
   {
     id: "gal-6",
-    src: "/images/haircut-back.png",
+    src: getAssetPath("/images/haircut-back.png"),
     alt: "Acabamento posterior de corte de cabelo masculino com graduação perfeita",
     category: "trabalhos",
     caption: "Graduação posterior suave e manutenção da linha natural de cabelo",

@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { Check, Globe2, Sparkles, HeartHandshake } from "lucide-react";
 import { SpotlightCard } from "@/components/SpotlightCard";
+import { getAssetPath } from "@/lib/utils";
 
 interface AboutProps {
   onOpenBooking: () => void;
@@ -23,7 +24,7 @@ export function About({ onOpenBooking }: AboutProps) {
               {/* Primary authentic photo: Clara at the chair */}
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
                 <Image
-                  src="/images/barber-clara.png"
+                  src={getAssetPath("/images/barber-clara.png")}
                   alt="Clara, profissional especialista na Style Place Barbershop"
                   fill
                   className="object-cover object-top hover:scale-105 transition-transform duration-700"
@@ -44,7 +45,7 @@ export function About({ onOpenBooking }: AboutProps) {
               <div className="hidden sm:block absolute -bottom-6 -right-6 w-48 rounded-2xl overflow-hidden border border-gold/40 shadow-gold-sm bg-background-secondary p-2">
                 <div className="relative aspect-video rounded-xl overflow-hidden mb-2">
                   <Image
-                    src="/images/storefront.png"
+                    src={getAssetPath("/images/storefront.png")}
                     alt="Entrada da Style Place Barbershop na Loja 17"
                     fill
                     className="object-cover"
